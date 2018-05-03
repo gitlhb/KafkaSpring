@@ -33,7 +33,7 @@
     <bean class="com.spring.kafka.service.KafkaConsumerService" id="messageListernerConsumerService"></bean>
     <!-- 消费者容器配置信息 -->
     <bean id="containerProperties" class="org.springframework.kafka.listener.config.ContainerProperties">
-        <constructor-arg value="test"/>
+        <constructor-arg value="myTopic"/>
         <property name="messageListener" ref="messageListernerConsumerService"/>
     </bean>
 

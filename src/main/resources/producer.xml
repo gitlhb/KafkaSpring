@@ -18,6 +18,7 @@
                 <entry key="batch.size" value="16384" />
                 <entry key="linger.ms" value="1" />
                 <entry key="buffer.memory" value="33554432" />
+                <!--<entry key="log.retention.minutes" value="2"></entry>-->
                 <entry key="key.serializer" value="org.apache.kafka.common.serialization.IntegerSerializer"/>
                 <entry key="value.serializer" value="org.apache.kafka.common.serialization.StringSerializer"/>
             </map>
@@ -36,6 +37,6 @@
     <bean id="kafkaTemplate" class="org.springframework.kafka.core.KafkaTemplate">
         <constructor-arg ref="producerFactory" />
         <constructor-arg name="autoFlush" value="true" />
-        <property name="defaultTopic" value="test" />
+        <property name="defaultTopic" value="myTopic" />
     </bean>
 </beans>

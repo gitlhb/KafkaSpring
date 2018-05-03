@@ -42,7 +42,7 @@ public class ProducerService {
     public void test() {
         try {
             SimpleDateFormat s = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
-            sendMessage(null, s.format(new Date()));
+            sendMessage("myTopic", s.format(new Date()));
         } catch (Exception ex) {
             ex.printStackTrace();
         }
